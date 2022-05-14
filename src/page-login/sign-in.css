@@ -1,0 +1,121 @@
+.SignIn {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:100vw;
+    min-width: 320px;
+}
+
+.loginbox{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 320px;  
+    height: 634px; 
+}
+
+.title{
+    margin:20px;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 155px; 
+    /* height: 36px; */
+    font-size: 36px;
+    font-weight: bold;
+}
+
+input{
+    outline:none;
+    border:none;
+    width:100%
+}
+
+input::placeholder {
+    color: #C5C5D1;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.input-si{
+    width: 320px;
+    height: 58px;
+    border-bottom: 1px solid #C5C5D1;
+    margin-top:18px;
+    margin-bottom:18px;
+}
+
+.input-si-title{
+    text-align: left;
+    font-size: 13px;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+.input-si-box{
+    text-align: left;
+    font-size: 15px;
+    font-weight: normal;
+    color: black;
+    padding-bottom: 10px;
+}
+
+.cf-msg{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:320px;
+    text-align: left;
+    font-size: 12px;
+    color:#F24957;
+    margin-bottom: 24px;
+}
+.btn-si-mj-320{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:320px;
+    height: 46px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color:#525266;
+    margin-bottom: 16px;
+}
+.btn-si{
+    display:flex;
+    
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 46px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    background-color:#F4F4F7;
+    margin-bottom: 16px;
+}
+
+.login-icon{
+    width:24px;
+    height:24px;
+}
+
+#btn-si-ap{
+    margin-bottom: 48px;
+}
+
+.rq-msg{
+    width: 320px;
+    height: 46px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+
+}
