@@ -1,0 +1,38 @@
+.SignUp {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:100vw;
+    min-width: 320px;
+}
+
+.SignUp-loginbox{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 320px;  
+    height: 1000px; 
+}
+
+.SignUp-title{
+    
+    display:flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    width: 320px; 
+    /* height: 36px; */
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.input-si-validation{
+    width: 320px;
+    height: 58px;
+    margin-top:18px;
+    margin-bottom:10px;
+}
