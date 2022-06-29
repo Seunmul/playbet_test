@@ -1,36 +1,32 @@
-.sign-up {
-    display: flex;
+.sign-up-nick {
+    display:flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100vw;
+    width:100vw;
     min-width: 320px;
 }
 
-.sign-up-loginbox {
-    display: flex;
+.sign-up-nick-loginbox{
+    display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 320px;
-    height: 1000px;
+    width: 320px;  
+    height: 500px; 
 }
 
-.sign-up-title {
-    display: flex;
+.sign-up-nick-title{
+    
+    display:flex;
     flex-direction: column;
     text-align: left;
     align-items: flex-start;
-    width: 320px;
+    width: 320px; 
+    /* height: 36px; */
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 300;
 }
 
-.input-si-validation {
-    width: 320px;
-    height: 58px;
-    margin-top: 18px;
-    margin-bottom: 10px;
-}

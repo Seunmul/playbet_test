@@ -1,0 +1,146 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: auto;
+  min-width: 320px;
+  border: 1px solid #c5c5d1;
+}
+
+.board-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 48px;
+  border: 1px solid #c5c5d1;
+}
+
+.board-menubar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 48px;
+  color: #f4f4f7;
+  background-color: #222222;
+  border: 1px solid #c5c5d1;
+}
+
+.board-bet {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: 352px;
+  border: 1px solid #c5c5d1;
+}
+
+/* 포스팅 영역 */
+.board-p {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  border: 1px solid #c5c5d1;
+}
+
+.board-p-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  min-height: 530px;
+  border: 1px solid #c5c5d1;
+}
+
+.board-p-m-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 895px;
+  height: auto;
+  border: 1px solid #c5c5d1;
+}
+
+.board-p-m-nav-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 895px;
+  height: 46px;
+  border: 1px solid #c5c5d1;
+}
+
+.board-p-m-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 895px;
+  height: auto;
+  border: 1px solid #c5c5d1;
+}
+
+.board-p-m-foot {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 895px;
+  height: auto;
+  border: 1px solid #c5c5d1;
+}
+
+.board-p-m-foot-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 895px;
+  height: 46px;
+  border: 1px solid #c5c5d1;
+}
+
+#board-p-m-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+  height: 46px;
+  border: 1px solid #c5c5d1;
+}
+
+#board-p-m-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 103px;
+  height: 46px;
+  border: 1px solid #c5c5d1;
+}
+/* 포스팅 영역 사이드바 */
+.board-p-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 265px;
+  height: 530px;
+  border: 1px solid #c5c5d1;
+}

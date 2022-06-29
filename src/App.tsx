@@ -22,7 +22,11 @@ type AppProps<Type> = {
 //const App = ({ message }: { message: string }) => <div>{message}</div>;
 
 type Log = string | number;
-const log : Log = "[22-06-27] 1. testing typescript, react + redux + react-dom-router";
+const log: Log =
+`[22-06-27] 1. testing typescript, react + react-dom-router\n\n
+ [22-06-28] 2. sign-up-nickname make\n
+ [22-06-29] 3. board.tsx make
+ `;
 
 
 
@@ -32,13 +36,13 @@ const App = ({ message, user }: AppProps<string>): JSX.Element => {
 
   const output = identity<string>("myString");
   const outnum = identity<number>(10);
-  const outtest = identity(10);  
+  const outtest = identity(10);
 
-  const test = <Type,>(x: Type): Type => {  
+  const test = <Type,>(x: Type): Type => {
     document.title = `You clicked ${count} times`;
-    console.log("loaded : "+loaded+"-----\n");
-    setLoaded(loaded+1);
-    
+    console.log("loaded : " + loaded + "-----\n");
+    setLoaded(loaded + 1);
+
     return x;
   }
 
@@ -46,16 +50,16 @@ const App = ({ message, user }: AppProps<string>): JSX.Element => {
     return arg;
   }
 
-  useEffect(()=>{
-    console.log(user as object,user.name);
+  useEffect(() => {
+    console.log(user as object, user.name);
     console.log(typeof output, typeof outnum, typeof outtest);
-  },[])
+  }, [])
 
   useEffect(() => {
-    console.log(message,count);
+    console.log(message, count);
     test("---closed---")
-  },[count]);
-  
+  }, [count]);
+
   return (
     <div className="App">
       <div className='main-title'>PLAYBET</div>
@@ -63,7 +67,7 @@ const App = ({ message, user }: AppProps<string>): JSX.Element => {
         <p>You clicked {count} times</p>
         <button onClick={() => setCount(count + 1)}>Click me</button>
       </div>
-      
+
       <div className='msg'>
         <br></br>{message}<br></br>
         --------
@@ -74,8 +78,8 @@ const App = ({ message, user }: AppProps<string>): JSX.Element => {
           {log}<br></br><br></br>
         </p>
       </div>
-      
-      
+
+
     </div>
   );
 }
