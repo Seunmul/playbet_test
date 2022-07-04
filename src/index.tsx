@@ -31,9 +31,11 @@ root.render(
   <Router>
     <Routes>
       <Route
-        path="/"
-        element={<App message="developed by seunmul" user={user} />}
+        // path="/" exact render={(): JSX.Element=> <App message="developed by seunmul" user={user} />}
+        path="/" element={<App message="developed by seunmul" user={user} />}
       />
+        <Route path="/:ID" element={<App message="developed by seunmul" user={user}/>}/>
+      <Route/>
       <Route path="/SignIn" element={<SignIn />} />
       <Route path="/SignUp" element={<SignUp />} />
       <Route path="/SignUpNick" element={<SignUpNick />} />
