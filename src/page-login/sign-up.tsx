@@ -1,6 +1,9 @@
 import "./css/sign-up.css";
 import { Link } from "react-router-dom";
-// import { useState, useEffect } from "react";
+// @ts-expect-error : .tsx
+import Input_si from "../components/Input_si.tsx";
+// @ts-expect-error : .tsx
+import Btn_si from "../components/Btn_si.tsx";
 
 const SignUp = (): JSX.Element => {
   return (
@@ -13,68 +16,40 @@ const SignUp = (): JSX.Element => {
           to="/SignUpNick"
           style={{ textDecorationLine: "none", color: "black" }}
         >
-          <div className="btn-si" id="btn-si-gg">
-            <div id="login-icon-size">
-              <img className="login-icon" src="img/google24.png"></img>
-            </div>
-            <div>구글로 로그인</div>
-            <div id="login-icon-size"></div>
-          </div>
+          <Btn_si loginBy="구글로 로그인" imgSrc="img/google24.png"></Btn_si>
         </Link>
-
-        <div className="btn-si" id="btn-si-ff">
-          <div id="login-icon-size">
-            <img className="login-icon" src="img/facebook24.png"></img>
-          </div>
-          <div>페이스북으로 로그인</div>
-          <div id="login-icon-size"></div>
-        </div>
-
-        <div className="btn-si" id="btn-si-ap">
-          <div id="login-icon-size">
-            <img className="login-icon" src="img/apple24.png"></img>
-          </div>
-          <div>애플로 로그인</div>
-          <div id="login-icon-size"></div>
-        </div>
+        <Btn_si loginBy="페이스북으로 로그인" imgSrc="img/facebook24.png"></Btn_si>
+        <Btn_si loginBy="애플로 로그인" imgSrc="img/apple24.png">
+        </Btn_si>
 
         <div className="sign-up-title" style={{ margin: "18px 0px 8px 0px" }}>
           PLAYBET 계정 만들기
         </div>
-        <div className="input-si-validation">
-          <div className="input-si-title">아이디</div>
-          <input
-            className="input-si-box"
-            type="text"
-            placeholder="아이디를 입력해주세요"
-          ></input>
-        </div>
+
+        <Input_si
+          title="아이디"
+          input_type="text"
+          placeholder="아이디를 입력해주세요"
+        ></Input_si>
         <div className="cf-msg">아이디 혹은 비밀번호를 확인해주세요.</div>
 
-        <div className="input-si">
-          <div className="input-si-title">닉네임</div>
-          <input
-            className="input-si-box"
-            type="text"
-            placeholder="(한글/영문/숫자) 최대 10자"
-          ></input>
-        </div>
-        <div className="input-si">
-          <div className="input-si-title">비밀번호</div>
-          <input
-            className="input-si-box"
-            type="password"
-            placeholder="(영문/숫자/특수문자) 8-16자리"
-          ></input>
-        </div>
-        <div className="input-si">
-          <div className="input-si-title">비밀번호 확인 </div>
-          <input
-            className="input-si-box"
-            type="password"
-            placeholder="(영문/숫자/특수문자) 8-16자리"
-          ></input>
-        </div>
+        <Input_si
+          title="닉네임"
+          input_type="text"
+          placeholder="(한글/영문/숫자) 최대 10자"
+        ></Input_si>
+
+        <Input_si
+          title="비밀번호"
+          input_type="password"
+          placeholder="(영문/숫자/특수문자) 8-16자리"
+        ></Input_si>
+
+        <Input_si
+          title="비밀번호 확인"
+          input_type="password"
+          placeholder="(영문/숫자/특수문자) 8-16자리"
+        ></Input_si>
 
         <Link
           to="/SignIn"
