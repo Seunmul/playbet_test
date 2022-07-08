@@ -1,9 +1,9 @@
+import React from "react";
 import "./css/sign-in.css";
 import { Link } from "react-router-dom";
-// @ts-expect-error : .tsx
-import Input_si from "../components/Input_si.tsx";
-// @ts-expect-error : .tsx
-import Btn_si from "../components/Btn_si.tsx";
+
+import Input_si from "../components/UI/Input_si";
+import Btn_si from "../components/UI/Btn_si";
 
 const SignIn = (): JSX.Element => {
   return (
@@ -14,12 +14,12 @@ const SignIn = (): JSX.Element => {
         </div>
         <Input_si
           title="아이디"
-          input_type="text"
+          type="text"
           placeholder="아이디를 입력하세요"
         ></Input_si>
         <Input_si
           title="비밀번호"
-          input_type="password"
+          type="password"
           placeholder="비밀번호를 입력하세요"
         ></Input_si>
         <div className="cf-msg">아이디 혹은 비밀번호를 확인해주세요.</div>
@@ -37,10 +37,13 @@ const SignIn = (): JSX.Element => {
         >
           <Btn_si loginBy="구글로 로그인" imgSrc="img/google24.png"></Btn_si>
         </Link>
-        <Btn_si loginBy="페이스북으로 로그인" imgSrc="img/facebook24.png"></Btn_si>
+        <Btn_si
+          loginBy="페이스북으로 로그인"
+          imgSrc="img/facebook24.png"
+        ></Btn_si>
         <Btn_si loginBy="애플로 로그인" imgSrc="img/apple24.png"></Btn_si>
         <div id="btn-si-ap"> </div>
-        
+
         <div className="rq-msg">
           아직 계정이 없으세요?
           <Link to="/SignUp">

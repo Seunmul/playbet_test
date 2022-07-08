@@ -1,11 +1,13 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 
-type AppProps<Type> = {
+type Counter_info<Type> = {
   message: Type;
+  ClickEventHandler: object;
+  counterValue: number;
 };
 
-const Counter = (props): JSX.Element => {
+const Counter = (props: Counter_info<string>): JSX.Element => {
   const count = props.counterValue;
   // console.log(props)
 
@@ -19,7 +21,7 @@ const Counter = (props): JSX.Element => {
         <p>You clicked {count} times</p>
         <button
           onClick={() => {
-            props.ClickEventHandler()
+            props.ClickEventHandler;
           }}
         >
           Click me

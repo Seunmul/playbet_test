@@ -1,23 +1,24 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-// @ts-expect-error : .tsx
-import Counter from "./components/counter.tsx";
-import "./firstpage.css";
-// @ts-expect-error : .tsx
-import Input_si from "./components/Input_si.tsx";
-// @ts-expect-error : .tsx
-import Btn_si from "./components/Btn_si.tsx";
 
+import Counter from "./components/UI/counter";
+import Input_si from "./components/UI/Input_si";
+import Btn_si from "./components/UI/Btn_si";
+
+import "./firstpage.css";
 
 interface User {
   name: string;
   id: number;
   age: number;
 }
+
 type AppProps<Type> = {
   message: Type;
   user: User;
-}; /* use `interface` if exporting so that consumers can extend */
+};
+/* use `interface` if exporting so that consumers can extend */
 
 // Easiest way to declare a Function Component; return type is inferred.
 //const App = ({ message }: AppProps) => <div>{message}</div>;
@@ -68,6 +69,7 @@ const FirstPage = ({ message, user }: AppProps<string>): JSX.Element => {
           setCount(count + 1);
         }}
         counterValue={count}
+        message="test"
       />
 
       <div className="msg">
@@ -86,13 +88,10 @@ const FirstPage = ({ message, user }: AppProps<string>): JSX.Element => {
       <div> ID:{params.ID}</div>
       <Input_si
         title="비밀번호"
-        input_type="password"
+        type="password"
         placeholder="비밀번호를 입력하세요"
       ></Input_si>
-      <Btn_si
-       loginBy="구글로 로그인"
-       imgSrc="img/google24.png"
-      ></Btn_si>
+      <Btn_si loginBy="구글로 로그인" imgSrc="img/google24.png"></Btn_si>
     </div>
   );
 };

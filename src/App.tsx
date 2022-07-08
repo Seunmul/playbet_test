@@ -1,17 +1,12 @@
+import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-//@ts-expect-error : .tsx
-import FirstPage from "./firstpage.tsx";
-//@ts-expect-error : .tsx
-import SignIn from "./page-login/sign-in.tsx";
-//@ts-expect-error : .tsx
-import SignUp from "./page-login/sign-up.tsx";
-//@ts-expect-error : .tsx
-import SignUpNick from "./page-login/sign-up-nick.tsx";
-//@ts-expect-error : .tsx
-import Board from "./page-board/board.tsx";
-
+import FirstPage from "./firstpage";
+import SignIn from "./page-login/sign-in";
+import SignUp from "./page-login/sign-up";
+import SignUpNick from "./page-login/sign-up-nick";
+import Board from "./page-board/board";
 
 interface User {
   name: string;
@@ -25,7 +20,7 @@ const user: User = {
   age: 24,
 };
 
-const message = 'developed by seunmul';
+const message = "developed by seunmul";
 
 const App = (): JSX.Element => {
   return (
