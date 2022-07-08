@@ -3,30 +3,26 @@ import { useEffect } from "react";
 
 type Counter_info<Type> = {
   message: Type;
-  ClickEventHandler: object;
+  ClickEventHandler(): void;
   counterValue: number;
 };
 
-const Counter = (props: Counter_info<string>): JSX.Element => {
-  const count = props.counterValue;
-  // console.log(props)
+const Counter = ({
+  message,
+  ClickEventHandler,
+  counterValue,
+}: Counter_info<string>): JSX.Element => {
 
+  
   useEffect(() => {
     console.log("coutner event-handling");
-  }, [count]);
+  }, []);
 
   return (
     <div>
-      <div>
-        <p>You clicked {count} times</p>
-        <button
-          onClick={() => {
-            props.ClickEventHandler;
-          }}
-        >
-          Click me
-        </button>
-      </div>
+      <p>You clicked {counterValue} times</p>
+      <button onClick={ClickEventHandler}> Click me </button>
+      <p>{message}</p>
     </div>
   );
 };

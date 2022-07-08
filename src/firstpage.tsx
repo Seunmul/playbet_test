@@ -2,11 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import Counter from "./components/UI/counter";
+import Counter from "./components/UI/Counter";
 import Input_si from "./components/UI/Input_si";
 import Btn_si from "./components/UI/Btn_si";
+import ValidMsg from "./components/UI/ValidMsg";
 
-import "./firstpage.css";
+import "./Firstpage.css";
 
 interface User {
   name: string;
@@ -39,12 +40,16 @@ const log: Log = `[22-06-27] 1. testing typescript, react + react-dom-router\n\n
 
 const FirstPage = ({ message, user }: AppProps<string>): JSX.Element => {
   const [count, setCount] = useState(0);
+  const [isValid, setIsValid] = useState(true);
 
   const output = identity<string>("myString");
   const outnum = identity<number>(10);
   const outtest = identity(10);
 
   const params = useParams(); //for react router
+  const clickHandler = () => {
+    setIsValid(!isValid);
+  };
 
   function identity<Type>(arg: Type): Type {
     return arg;
@@ -59,6 +64,12 @@ const FirstPage = ({ message, user }: AppProps<string>): JSX.Element => {
     console.log("counter lodaed - " + count + " times\n\n");
     document.title = `You clicked ${count} times : ${params.ID}`;
   }, [count]);
+
+  const check_msg = !isValid ? (
+    <div className="cf-msg">아이디 혹은 비밀번호를 확인해주세요</div>
+  ) : (
+    <div></div>
+  );
 
   return (
     <div className="firstpage">
@@ -90,7 +101,8 @@ const FirstPage = ({ message, user }: AppProps<string>): JSX.Element => {
         title="비밀번호"
         type="password"
         placeholder="비밀번호를 입력하세요"
-      ></Input_si>
+      ><ValidMsg check={isValid}>test</ValidMsg></Input_si>
+      <button onClick={clickHandler}>test</button>
       <Btn_si loginBy="구글로 로그인" imgSrc="img/google24.png"></Btn_si>
     </div>
   );
