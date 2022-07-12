@@ -2,10 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import Counter from "./components/UI/Counter";
-import Input_si from "./components/UI/Input_si";
-import Btn_si from "./components/UI/Btn_si";
-import ValidMsg from "./components/UI/ValidMsg";
+import Counter from "../components/Counter";
+import Input_si from "../components/UI/Input_si";
+import Btn_si from "../components/UI/Btn_si";
+import ValidMsg from "../components/ValidMsg";
 
 import "./Firstpage.css";
 
@@ -64,12 +64,6 @@ const FirstPage = ({ message, user }: AppProps<string>): JSX.Element => {
     console.log("counter lodaed - " + count + " times\n\n");
     document.title = `You clicked ${count} times : ${params.ID}`;
   }, [count]);
-
-  const check_msg = !isValid ? (
-    <div className="cf-msg">아이디 혹은 비밀번호를 확인해주세요</div>
-  ) : (
-    <div></div>
-  );
 
   return (
     <div className="firstpage">

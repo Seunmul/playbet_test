@@ -1,0 +1,38 @@
+.border {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 48px;
+    border: 1px solid #c5c5d1;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1260px;
+    width: 100%;
+    height: inherit;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.betlist {
+    margin-right: 36px;
+}
+
+.login {
+    margin-left: auto;
+}
+
+.login:enabled {}
+
+
+.logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 44px
+}

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import LoginPlatfrom from "../components/Login/LoginPlatform";
-import Input_si from "../components/UI/Input_si";
-import Btn_si_mj from "../components/UI/Btn_si_mj";
-import ValidMsg from "../components/UI/ValidMsg";
+import LoginPlatfrom from "../../components/Login/LoginButton";
+import Input_si from "../../components/UI/Input_si";
+import Btn_si_mj from "../../components/UI/Btn_si_mj";
+import ValidMsg from "../../components/ValidMsg";
 
 import styles from "./SignIn.module.css";
 
@@ -39,7 +39,7 @@ const SignIn = (): JSX.Element => {
           </ValidMsg>
         </Input_si>
         <Link
-          to="/Board"
+          to="/BoardPage"
           style={{ textDecorationLine: "none", color: "black" }}
         >
           <Btn_si_mj style={{ marginTop: "24px" }}>로그인</Btn_si_mj>

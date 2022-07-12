@@ -1,0 +1,11 @@
+.board-betlist {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 352px;
+    border: 1px solid #c5c5d1;
+    background-color: #F4F4F7;
+  }
+  

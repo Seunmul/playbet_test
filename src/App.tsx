@@ -2,11 +2,11 @@ import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import FirstPage from "./Firstpage";
-import SignIn from "./page-login/SignIn";
-import SignUp from "./page-login/SignUp";
-import SignUpNick from "./page-login/SignUpNick";
-import Board from "./page-board/board";
+import FirstPage from "./pages/Firstpage";
+import SignIn from "./pages/Login/SignIn";
+import SignUp from "./pages/Login/SignUp";
+import SignUpNick from "./pages/Login/SignUpNick";
+import BoardPage from "./pages/Board/BoardPage";
 
 interface User {
   name: string;
@@ -40,7 +40,7 @@ const App = (): JSX.Element => {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/SignUpNick" element={<SignUpNick />} />
           <Route path="/SignUpNick:Platform" element={<SignUpNick />} />
-          <Route path="/Board" element={<Board />} />
+          <Route path="/BoardPage" element={<BoardPage />} />
         </Routes>
       </Router>
     </div>

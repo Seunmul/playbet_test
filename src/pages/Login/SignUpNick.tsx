@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 
-import Input_si from "../components/UI/Input_si";
-import Btn_si_mj from "../components/UI/Btn_si_mj";
+import Input_si from "../../components/UI/Input_si";
+import Btn_si_mj from "../../components/UI/Btn_si_mj";
 import styles from "./SignUpNick.module.css";
 
 const SignUpNick = (): JSX.Element => {

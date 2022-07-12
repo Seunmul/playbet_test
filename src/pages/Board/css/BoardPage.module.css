@@ -1,0 +1,12 @@
+.board-page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: auto;
+  min-width: 320px;
+  border: 1px solid #c5c5d1;
+}
